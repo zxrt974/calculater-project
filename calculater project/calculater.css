@@ -1,0 +1,208 @@
+/* ANIMATION */
+
+@keyframes move_around{
+    0%{
+        transform: translateX(0px) rotate(0deg) scale(1);
+    }
+    50%{
+     transform: translateX(-180px) rotate(0deg) scale(1);   
+    }
+}
+
+@keyframes flying_witch{
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(60px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/************/
+
+
+
+
+body {
+  background: url('walpepr/cute_math.jpg') no-repeat center center fixed;
+  background-size: cover;
+  }
+
+/* NIGHT AND LIGHT MODE */
+
+body.day-mode {
+    background: url('walpeper/cute_math.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.night-mode {
+    background: url('walpeper/black_walpeper.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.calculater_body.night_mode{
+    background-color: #1f1d1d;
+}
+
+
+/*********************/
+
+.calculater_position{
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50% , 12%);
+}
+
+.calculater_body{
+    width: 24rem;
+    height: 30rem;
+    background-color: rgb(110, 182, 244);
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.buttons{
+    background-color: rgb(77, 108, 135);
+    color: aliceblue;
+    width: 4.5rem;
+    height: 4rem;
+    border: 3px solid black;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.buttons:hover{
+    scale: 0.90;
+    background-color: rgb(69, 142, 210);
+}
+
+.buttons_display{
+    position: relative;
+    top: 13rem;
+    display:flex;
+    justify-content: space-around;
+    gap: 1px;
+    margin: 3px;
+}
+
+.board{
+    background-color: rgb(77, 108, 135);
+    width: 23rem;
+    height: 6rem;
+    position: relative;
+    top: -13rem;
+    left: 0.3rem;
+    border: 3px solid #000000;
+    border-radius:5px;
+    font-size: 30px;
+    
+}
+
+.type{
+    color: white;
+    position: absolute;
+    top: 0.5rem;
+}
+
+
+.return_button{
+    background-color: rgb(254, 145, 19);
+    width: 4.2rem;
+    height: 2rem;
+    position: relative;
+    bottom: 12.6rem;
+    left: 15.1rem;
+    border: 3px solid black;
+}
+
+
+.sun_block{
+    background-color:rgba(113, 56, 25, 0.917) ;
+    width: 11rem;
+    height: 3.4rem;
+    position: relative;
+    bottom: 77.1%;
+    left: 51.2%;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+
+.first_photo{
+    width: 44%;
+    height: 40%;
+    position: relative;
+    bottom: 75%;
+    left: 60%;
+    z-index: 1;
+    cursor: default;
+}
+
+.second_photo{
+    width: 12rem;
+    height: 15rem;
+    position:absolute;
+    bottom: 60%;
+    left: 100%;
+
+    animation: flying_witch 6s ease-in-out 0s infinite none;
+}
+
+.third_photo{
+    width: 15rem;
+    position: absolute;
+    top: 50%;
+    right: 110%;
+
+    animation: flying_witch 6s ease-in-out 1s infinite normal none;
+}
+.stars_photo_container{
+
+    position: relative;
+    bottom:40%;
+    right: 10%;
+    display:flex;
+    gap: 20px;
+}
+
+
+.fourth_photo{
+    width: 6rem;
+    opacity: 0.4;
+}
+
+
+/* MODE */
+
+.buttons_container{
+    position: absolute;
+    bottom: 1%;
+    left: 90%;
+    gap: 4px;
+}
+
+.night_button{
+   width:3.5rem ;
+    height:3.5rem ;
+    border: 3px solid white;
+    background-color: #000000;
+    color: white;
+    border-radius: 100px;
+}
+
+.light_button{
+      width:3.5rem ;
+    height:3.5rem ;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: #e2dcdc;
+    color: white;
+    border-radius: 100px;
+}
+
+/************/

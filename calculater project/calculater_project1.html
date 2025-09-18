@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculater.css">
+    <title>js.learn</title>
+
+    
+</head>
+<body id="body">
+  
+    <div class="calculater_position">
+        <div class="calculater_body" id="calculater"> 
+            
+            <div class="type">
+                <p>CASIO fx-991ES PLUS-<small>BU</small></p>
+            </div>
+
+            <div class="buttons_display">
+                <button class="buttons" onclick="show('7')">7</button>
+                <button class="buttons" onclick="show('8')">8</button>
+                <button class="buttons" onclick="show('9')">9</button>
+                <button class="buttons" style="background-color: rgb(221, 228, 86); color: black;" onclick="return_number()">DEL</button>
+                <button class="buttons" style="background-color: rgb(221, 228, 86); color: black;" onclick="clear_display()">AC</button>
+
+            </div>
+
+            <div class="buttons_display">
+                
+                <button class="buttons" onclick="show('4')">4</button>
+                <button class="buttons" onclick="show('5')">5</button>
+                <button class="buttons" onclick="show('6')">6</button>
+                <button class="buttons" onclick="show('*')">X</button>
+                <button class="buttons" onclick="show('/')">/</button>
+
+            </div>
+
+             <div  class="buttons_display">
+                
+                <button class="buttons" onclick="show('1')">1</button>
+                <button class="buttons" onclick="show('2')">2</button>
+                <button class="buttons" onclick="show('3')">3</button>
+                <button class="buttons" onclick="show('+')">+</button>
+                <button class="buttons" onclick="show('-')">-</button>
+                
+
+            </div>
+
+             <div class="buttons_display">
+                
+                <button class="buttons" onclick="show('0')">0</button>
+                <button class="buttons" onclick="show('.')">.</button>
+                <button class="buttons" onclick="show('()')">(</button>
+                <button class="buttons" onclick="show(')')">)</button>
+                <button class="buttons" onclick="calculate()">=</button>
+                
+                
+            </div>
+
+            <div class="board" id="display"></div>
+
+            <div class="sun_block"></div>
+
+            <div class="first_photo">
+                <img class="first_photo" src="1.png">
+            </div>
+            
+        </div>
+
+        <div>
+            <img class="second_photo" src="2.png">
+        </div>
+        
+        <div>
+            <img class="third_photo" src="3.png">
+        </div>
+
+    </div>
+
+    <div class="buttons_container">
+        <div>
+        <button class="light_button" id="light_button" >☀️</button>
+        </div>
+        
+        <div>
+        <button class="night_button" id="night_button">🌙</button>
+        </div>
+    </div>
+
+    <script src="calculater.js"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const light = document.getElementById('light_button');
+  const night = document.getElementById('night_button');
+  const calculater = document.getElementById('calculater');
+  const body = document.getElementById('body');
+
+  // نفحص لون الحاسبة لتحديد الوضع
+  const bgColor = window.getComputedStyle(calculater).backgroundColor;
+
+  if (bgColor === 'rgb(110, 182, 244)') {
+    // الوضع النهاري
+    body.classList.add('day-mode');
+    body.classList.remove('night-mode');
+    light.style.display = 'none';
+    night.style.display = 'inline-block';
+  } else {
+    // الوضع الليلي
+    body.classList.add('night-mode');
+    body.classList.remove('day-mode');
+    night.style.display = 'none';
+    light.style.display = 'inline-block';
+  }
+
+  // زر النهار
+  light.addEventListener("click", () => {
+    body.classList.add('day-mode');
+    body.classList.remove('night-mode');
+    calculater.classList.remove('night_mode')
+    light.style.display = 'none';
+    night.style.display = 'inline-block';
+  });
+
+  // زر الليل
+  night.addEventListener("click", () => {
+    body.classList.add('night-mode');
+    body.classList.remove('day-mode');
+    calculater.classList.add('night_mode')
+
+    night.style.display = 'none';
+    light.style.display = 'inline-block';
+  });
+});
+</script>
+
+</body>
+</html>
