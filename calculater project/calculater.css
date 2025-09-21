@@ -206,3 +206,50 @@ body.night-mode {
 }
 
 /************/
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+
+.calculater_body{
+    width: 21rem;
+}
+
+.sun_block{
+    width: 10.5rem;
+    left: 47.5%;
+    bottom: 77.5%;
+}
+
+.type{
+    font-size: 13.5px;
+}
+
+.board{
+    width: 95%;
+}
+
+.third_photo{
+    display: none;
+}
+
+.second_photo{
+    display: none;
+}
+
+.buttons_container{
+    left: 80%;
+    bottom: 0%;
+}
+
+.calculater_position{
+    top: 15%;
+}
+
+
+}
+
+/*****************/
+
