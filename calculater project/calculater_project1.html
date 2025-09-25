@@ -133,6 +133,33 @@ document.addEventListener("DOMContentLoaded", () => {
     night.style.display = 'none';
     light.style.display = 'inline-block';
   });
+
+    
+  const gray = document.getElementById('gray_button');
+  const green = document.getElementById('hartreuse_button');
+  const purple = document.getElementById('darkviolet_button');
+  const pink = document.getElementById('magenta_button');
+  const black = document.getElementById('black_button');
+  const blue = document.getElementById('blue_button');
+  
+  const colors = ['gray_color', 'green_color', 'purple_color', 'pink_color', 'black_color', 'blue_color'];
+
+  function setColor(color){
+
+    calculater.classList.remove(...colors);
+
+    calculater.classList.add(color);
+
+  }
+
+
+  gray.addEventListener("click" , () => setColor('gray_color'));
+  green.addEventListener("click" , () => setColor('green_color'));
+  purple.addEventListener("click" , () => setColor('purple_color'));
+  pink.addEventListener("click" , () => setColor('pink_color'));
+  black.addEventListener("click" , () => setColor("black_color"));
+  blue.addEventListener("click" , () => setColor('blue_color'));
+
 });
 </script>
 
